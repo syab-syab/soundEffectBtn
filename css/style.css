@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/* 基幹 */
+
+html {
+  font-size: 62.5%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+
+/* footer */
+
+.footer {
+  /* 後で変更 */
+  font-size: 3rem;
+}
+
+
+
+/* footer end */
