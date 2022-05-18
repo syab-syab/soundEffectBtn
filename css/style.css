@@ -12,7 +12,42 @@ html {
 
 body {
   text-align: center;
+  background: url(../img/background2.jpg);
 }
+
+/* header */
+
+.header {
+  background: rgb(255, 234, 131);
+  padding: 3rem;
+}
+
+/* header end */
+
+/* container */
+
+.container {
+  padding: 10rem 0;
+}
+
+.sound-select {
+  -webkit-appearance: none;
+  appearance: none;
+  /* とりあえずdiatonicChordとほぼ同じ */
+  /* color: white; */
+  width: auto;
+  padding: 1rem;
+  margin: 2rem auto;
+  border-radius: 1rem;
+  background-color: transparent;
+  outline: none;
+}
+
+.effect-button-space {
+  font-size: 3rem;
+}
+
+/* container end */
 
 /* footer */
 
