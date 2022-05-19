@@ -23,7 +23,7 @@ var genre = document.getElementById("sound-select");
 
 var btn = document.getElementById("play");
 
-var sound = new Audio("./sound/se/カーッ.mp3");
+var sound = new Audio("./sound/se1/カーッ.mp3");
 
 
 function playTone() {
