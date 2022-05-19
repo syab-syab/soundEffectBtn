@@ -27,7 +27,7 @@ body {
 /* container */
 
 .container {
-  padding: 10rem 0;
+  padding: 1rem;
 }
 
 .sound-select {
@@ -45,12 +45,22 @@ body {
 
 .sound-effect-button-space {
   font-size: 3rem;
+  padding: 2rem;
 }
 
 .sound-effect-button {
   display: inline-block;
   background-color: rgb(255, 255, 154);
+  width: 30%;
+  padding: 3rem 0;
+  margin: 0 2rem 1rem;
 }
+
+/* hover以外にもクリックした時のスタイルも書いておく */
+.sound-effect-button:hover {
+  cursor: pointer;
+}
+
 
 /* container end */
 
@@ -70,5 +80,6 @@ body {
 @media (max-width: 768px) {
   .sound-effect-button {
     display: block;
+    width: 100%;
   }
 }
