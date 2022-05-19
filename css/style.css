@@ -43,8 +43,13 @@ body {
   outline: none;
 }
 
-.effect-button-space {
+.sound-effect-button-space {
   font-size: 3rem;
+}
+
+.sound-effect-button {
+  display: inline-block;
+  background-color: rgb(255, 255, 154);
 }
 
 /* container end */
@@ -59,3 +64,11 @@ body {
 
 
 /* footer end */
+
+/* レスポンシブ */
+
+@media (max-width: 768px) {
+  .sound-effect-button {
+    display: block;
+  }
+}

@@ -1,9 +1,14 @@
 // 面倒だけどsoundフォルダ内のフォルダ名をいちいち配列に入れるしかない
-// node.jsを使いたいけど
 
-voice = ["笑い声", "応！", "黄色い悲鳴"];
 
-effectBtnSpace = document.getElementById("effect-button-space");
+var voice1 = ["笑い声", "応！", "黄色い悲鳴"];
+var voice2 = [];
+var voice3 = [];
+var se1 = [];
+var se2 = [];
+var se3 = [];
+
+effectBtnSpace = document.getElementById("sound-effect-button-space");
 
 // もしaudioタグのcontrolボタンでしか再生することができ無さそうなら
 // audioタグをdisplay: none;にして再生ボタンだけ押せるか試す
@@ -12,30 +17,48 @@ effectBtnSpace = document.getElementById("effect-button-space");
 var buttons = "";
 
 // ジャンル
-var genle = "voice";
+var genre = document.getElementById("sound-select");
 
 // 再生ボタンテスト
 
-// var playBtn = document.getElementById("play-test");
+var btn = document.getElementById("play");
 
-// function playTone() {
-//   var audioTest = document.getElementById("test");
-//   audioTest.play();
-// }
+var sound = new Audio("./sound/se/カーッ.mp3");
 
-// playBtn.addEventListener("click", playTone());
+
+function playTone() {
+  sound.play();
+  console.log("play")
+}
+
+
+btn.addEventListener("click", playTone);
+
 
 // 再生ボタンテスト end
 
 
-for (var i = 0; i < voice.length; i ++) {
-  console.log(voice[i]);
-  buttons += `
-  <p>${voice[i]}</p>
-  <audio controls>
-    <source src="sound/${genle}/${voice[i]}.mp3">
-  </audio>
-  `;
-}
+// audioタグ無しでやるから、各音声ファイルのパスを配列に入れる
+// クリックされたボタンの数をに対応させて再生する
 
-effectBtnSpace.innerHTML = buttons;
+
+// ここから↓を関数にまとめる
+// selectタグのchangeイベントで発動するようにする
+function indicateSoundButton() {
+  console.log(genre.value);
+}
+// for (var i = 0; i < voice.length; i ++) {
+//   console.log(voice[i]);
+//   buttons += `
+//   <div class="sound-effect-button">
+//     <p>${voice[i]}</p>
+//     <audio controls>
+//       <source src="sound/${genre}/${voice[i]}.mp3">
+//     </audio>
+//   </div>
+//   `;
+// }
+
+// effectBtnSpace.innerHTML = buttons;
+
+genre.addEventListener("change", indicateSoundButton);
