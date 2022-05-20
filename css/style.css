@@ -46,6 +46,8 @@ body {
 .sound-effect-button-space {
   font-size: 3rem;
   padding: 2rem;
+  /* 要素を左寄せにするが文字まで左に寄る */
+  text-align: left;
 }
 
 .sound-effect-button {
@@ -54,12 +56,16 @@ body {
   width: 30%;
   padding: 3rem 0;
   margin: 0 2rem 1rem;
+  box-shadow: 0px 0px 22px -5px #919191;
+  /* 左に寄った文字のみを中央に戻す */
+  text-align: center;
 }
 
-/* hover以外にもクリックした時のスタイルも書いておく */
 .sound-effect-button:hover {
   cursor: pointer;
+  box-shadow: inset 0px 0px 12px 4px #C4C4C4;
 }
+
 
 
 /* container end */
@@ -76,6 +82,12 @@ body {
 /* footer end */
 
 /* レスポンシブ */
+
+@media (max-width: 1465px) {
+  .sound-effect-button-space {
+    text-align: center;
+  }
+}
 
 @media (max-width: 768px) {
   .sound-effect-button {
