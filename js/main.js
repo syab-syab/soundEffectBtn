@@ -29,7 +29,6 @@ var genre = document.getElementById("sound-select");
 
 
 // クリックされたボタンの数をに対応させて再生する
-
 function selectAlert() {
   soundEBSpace.innerHTML = "<h1>選択してください</h1>";
 }
@@ -40,39 +39,44 @@ function soundsDirVariable(value) {
   switch(value) {
     case "0":
       return ["voice1", voice1];
-      break;
     case "1":
       return ["voice2", voice2];
-      break;
     case "2":
       return ["se1", se1];
-      break;
     case "3":
       return ["se2", se2];
-      break;
     case "4":
       return ["se3", se3];
-      break;
     case "5":
       return ["danger", danger];
-      break;
     default:
-      // alert("選択してください。")
       return "";
   };
 }
 
+
+// 再生中のボタンの表示を変える(クラスの付け外し)
+function toggleClass() {
+  if (this.tag.classList.contains("active")) {
+    this.tag.classList.remove("active");
+  } else {
+    this.tag.classList.add("active");
+  }
+}
+
 // 再生の関数
 function playSound() {
-  var sound = new Audio(`./sound/${this.name}`);
+  var sound = new Audio(this.name);
   sound.play();
+  sound.addEventListener("play", {tag: this.tag ,handleEvent: toggleClass});
+  sound.addEventListener("pause", {tag: this.tag ,handleEvent: toggleClass});
 }
 
 // 再生ボタンを表示させる関数
 function buttonsRegister(value) {
   var buttonTotal = document.getElementsByClassName("sound-effect-button");
   for (var i = 0; i < buttonTotal.length; i++) {
-    var fileName = `${value}/${buttonTotal[i].innerText}.mp3`
+    var fileName = `./sound/${value}/${buttonTotal[i].innerText}.mp3`
     buttonTotal[i].addEventListener("click", {name: fileName, tag: buttonTotal[i], handleEvent: playSound});
   }
 }

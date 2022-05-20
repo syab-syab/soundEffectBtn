@@ -66,7 +66,9 @@ body {
   box-shadow: inset 0px 0px 12px 4px #C4C4C4;
 }
 
-
+.active {
+  box-shadow: inset 0px 0px 12px 4px #C4C4C4;
+}
 
 /* container end */
 
