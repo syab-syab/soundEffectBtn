@@ -28,11 +28,6 @@ var buttons = "";
 var genre = document.getElementById("sound-select");
 
 
-// クリックされたボタンの数をに対応させて再生する
-function selectAlert() {
-  soundEBSpace.innerHTML = "<h1>選択してください</h1>";
-}
-
 // フォルダ名と再生ファイル名を格納する関数
 function soundsDirVariable(value) {
   // 配列を返す[フォルダ名, 再生ファイル名の配列
@@ -54,22 +49,17 @@ function soundsDirVariable(value) {
   };
 }
 
-
 // 再生中のボタンの表示を変える(クラスの付け外し)
 function toggleClass() {
-  if (this.tag.classList.contains("active")) {
-    this.tag.classList.remove("active");
-  } else {
-    this.tag.classList.add("active");
-  }
+  this.tag.classList.toggle("active");
 }
 
 // 再生の関数
 function playSound() {
   var sound = new Audio(this.name);
   sound.play();
-  sound.addEventListener("play", {tag: this.tag ,handleEvent: toggleClass});
-  sound.addEventListener("pause", {tag: this.tag ,handleEvent: toggleClass});
+  sound.addEventListener("play", {tag: this.tag, handleEvent: toggleClass});
+  sound.addEventListener("pause", {tag: this.tag, handleEvent: toggleClass});
 }
 
 // 再生ボタンを表示させる関数
@@ -102,7 +92,8 @@ function indicateSoundButton() {
     buttons = "";
     buttonsRegister(soundDir);
   } else {
-    selectAlert();
+    // selectAlert();
+    alert("選択してください。");
   }
 }
 

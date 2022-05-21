@@ -1,49 +1,56 @@
 <html>
-<head>
+<head head prefix=”og: http://ogp.me/ns#”>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Web site desctiption -->
+  <meta name="description" content="よく使われている効果音をまとめたサイトです。">
+  <meta name="keywords" content="効果音, SE">
+  <meta name="format-detection" content="telephone=no,address=no,date=no,email=no">
+
+    <!-- OGP -->
+  <meta property="og:url" content="https://syab-syab.github.io/soundEffectBtn/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="効果音ボタン">
+  <meta property="og:description" content="よく使われている効果音をまとめたサイトです。">
+  <meta property="og:image" content="">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- style -->
   <link rel="stylesheet" href="css/normalize.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <title>効果音ボタン(仮)</title>
+  <title>効果音ボタン</title>
 </head>
 <body>
-  <!-- とりあえずフリーの効果音の音声ファイルを集められるだけ集める -->
-  <!-- 最初に表示されるのはおすすめで -->
-  <!-- オプションで人の反応、効果音、鳴き声とかそういうジャンル分けする -->
-  <!-- backgroundは小さい画像を繰り返し表示して総柄っぽくする感じ。できるだけポップに -->
   <header class="header">
-    <h1 class="title">効果音ボタン(仮)</h1>
+    <h1 class="title">効果音ボタン</h1>
   </header>
 
   <main class="container">
-    <!-- ここにメインコンテンツ -->
-    <!-- selectタグの選択してくださいのoptionをどうにかする -->
     <select name="" id="sound-select" class="sound-select">
       <option value="" selected>選択してください。</option>
       <option value="0">声系1</option>
       <option value="1">声系2</option>
-      <!-- <option value="2">声系3</option> -->
       <option value="2">SE1</option>
       <option value="3">SE2</option>
       <option value="4">SE3</option>
       <option value="5">悪用禁止!!</option>
     </select>
     <div class="sound-effect-button-space" id="sound-effect-button-space">
-        <!-- スマホなどは縦並びでパソコンは横並び -->
-        <!-- あと、やっぱりおならの音は入れる -->
-        <!-- コピーライトの場所に書けば大丈夫かな？ -->
-        <!-- 再生ボタンテスト -->
-        <!-- audioタグ要らない -->
-        <!-- <button id="play">再生テスト</button> -->
+      <!-- ボタン表示スペース -->
     </div>
   </main>
 
   <footer class="footer">
     <div class="twitter-share-btn">
-      <a href="" target="_blank"><i class="fa-brands fa-twitter"></i><span>Twitter</span></a>
+      <a href="http://twitter.com/share?url=https://syab-syab.github.io/soundEffectBtn/&text=効果音ボタン" target="_blank"><i class="fa-brands fa-twitter"></i><span>Twitter</span></a>
     </div>
     <span class="copy">
       © 効果音ボタン
